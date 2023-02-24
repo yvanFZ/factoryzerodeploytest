@@ -351,9 +351,9 @@ class GetFunctieView(APIView):
         return Response({
             'functies': data
         })
-@method_decorator(csrf_protect, name='dispatch')
+
 class CreateFunctieView(APIView):
-    permission_classes = (permissions.AllowAny,)
+
     def post(self,request,format=None):
         data = self.request.data
         functie_name = data['functie']

@@ -1,0 +1,20 @@
+// AUTHENTIFICATION LIST
+---------------------------
+
+// devlopement DTABASE
+DB_NAME=fzdev
+DB_USER=postgres
+DB_PASSWORD=test
+DB_HOST=127.0.0.1
+DB_PORT=5432
+sslmode=require
+
+// production DTABASE
+----------------------
+
+DB_NAME=factoryzerotest-database
+DB_USER=ribnlmaaku
+DB_PASSWORD=33PTK6FC3027860Z$
+DB_HOST=factoryzerotest-server.postgres.database.azure.com
+DB_PORT=5432
+sslmode=require

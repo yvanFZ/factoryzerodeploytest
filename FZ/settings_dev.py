@@ -72,7 +72,7 @@ INSTALLED_APPS = [
 CSRF_COOKIE_HTTPONLY = False
 # CSRF_COOKIE_SAMESITE = 'Strict'
 CSRF_COOKIE_SAMESITE=None
-ALLOWED_HOSTS=['127.0.0.1:8000']
+ALLOWED_HOSTS=['127.0.0.1']
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
@@ -136,12 +136,7 @@ DATABASES = {
         'PORT': get_env_variable('DB_PORT'),
         'sslmode': get_env_variable('sslmode'),
 
-        # for developement
-        # 'NAME': "fzdev", 
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'admin',
-        # 'HOST': '127.0.0.1', 
-        # 'PORT': '5432',
+     
     }
 }
 
