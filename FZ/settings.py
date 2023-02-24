@@ -72,7 +72,7 @@ INSTALLED_APPS = [
 CSRF_COOKIE_HTTPONLY = False
 # CSRF_COOKIE_SAMESITE = 'Strict'
 CSRF_COOKIE_SAMESITE=None
-ALLOWED_HOSTS=['https://factoryzerotest.azurewebsites.net']
+ALLOWED_HOSTS=['factoryzerotest.azurewebsites.net']
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
