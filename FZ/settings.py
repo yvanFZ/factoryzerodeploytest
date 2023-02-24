@@ -135,13 +135,6 @@ DATABASES = {
         'HOST': env('DB_HOST'), 
         'PORT': env('DB_PORT'),
         'sslmode': env('sslmode'),
-
-        # for developement
-        # 'NAME': "fzdev", 
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'admin',
-        # 'HOST': '127.0.0.1', 
-        # 'PORT': '5432',
     }
 }
 
@@ -193,7 +186,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # LOGIN_REDIRECT_URL = "authentification:home"
 # LOGOUT_REDIRECT_URL = "login" 
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
