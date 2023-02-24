@@ -176,13 +176,13 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static/')]
+
 
 # # the path for developement
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static/')] 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 # LOGIN_REDIRECT_URL = "authentification:home"
 # LOGOUT_REDIRECT_URL = "login" 
