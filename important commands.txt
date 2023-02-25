@@ -17,4 +17,12 @@ psql "host=factoryzerotest-server.postgres.database.azure.com port=5432 dbname=f
 
 psql --file=mybackup.sql --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku --dbname=factoryzerotest-database
 
-$ pg_restore -v --no-owner --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku  --dbname=factoryzerotest-database -j mybackup.sql 
+$ pg_restore -v --no-owner --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku  --dbname=factoryzerotest-database -j mybackup12.sql
+psql --file=mybackup12.sql --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku --dbname=factoryzerotest-database
+
+
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc| gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+
+pg_restore --dbname=factoryzerotest-database --file=mybackup12.sql --schema=public --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku --password=33PTK6FC3027860Z$
+
+pg_restore -h factoryzerotest-server.postgres.database.azure.com -U azure-postgres-ribnlmaaku@factoryzerotest-server.postgres.database.azure.com -Fc -j 4 -d factoryzerotest-database mybackup12.sql
