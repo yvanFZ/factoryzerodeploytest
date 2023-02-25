@@ -1,0 +1,20 @@
+- git update with sql
+- database leg maken 
+- inladden database met de juiste gegevens
+- run de app
+
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public ;
+
+GRANT ALL ON SCHEMA factoryzerotest-server TO postgres;
+GRANT ALL ON SCHEMA factoryzerotest-server TO factoryzerotest-server;
+
+psql --file=mybackup.sql --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku --dbname=factoryzerotest-database
+
+psql factoryzerotest-database < mybackup.sql 
+psql factoryzerotest-server.postgres.database.azure.com:5432:factoryzerotest-database:ribnlmaaku:33PTK6FC3027860Z$ factoryzerotest-database > 
+psql "host=factoryzerotest-server.postgres.database.azure.com port=5432 dbname=factoryzerotest-database user=ribnlmaaku password=33PTK6FC3027860Z$ sslmode=require"
+
+psql --file=mybackup.sql --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku --dbname=factoryzerotest-database
+
+$ pg_restore -v --no-owner --host=factoryzerotest-server.postgres.database.azure.com --port=5432 --username=ribnlmaaku  --dbname=factoryzerotest-database -j mybackup.sql 

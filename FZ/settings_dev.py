@@ -109,7 +109,7 @@ ROOT_URLCONF = 'FZ.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'build')], # voor react
+        'DIRS': [os.path.join(BASE_DIR,'build_dev')], # voor react
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -181,7 +181,7 @@ STATIC_URL = '/static/'
 # STATICFILES_DIRS = os.path.join(BASE_DIR, 'build/static/')
 
 # # the path for developement
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static/')] 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build_dev/static/')] 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # STATIC_ROOT = BASE_DIR / "staticfiles"
