@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'factoryzerotest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_61DD21F648CB42259CF8D3D87EA394BF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DA59C45DB33049FD9A703E2648AF1BF4 }}
